@@ -1,6 +1,6 @@
-Absolutely baby ❤️ Here is a **professional + interactive GitHub README.md** for your project. You can copy everything below directly into your `README.md`.
 
-````markdown
+
+
 # 🤖 AI-Powered CV Analyzer & Job Matching System
 
 > An NLP-based system that analyzes resumes, understands job descriptions, matches candidates with suitable jobs, and identifies skill gaps using traditional NLP techniques and Transformer-based embeddings.
@@ -480,41 +480,13 @@ The final system could be developed into a web application:
 
 # 👨‍💻 Author
 
-**Your Name**
+Savindi Hewage
 
 🎓 Data Science Undergraduate
 📍 Sri Lanka
 
 ### Connect with me
 
-* 💼 LinkedIn: [Your LinkedIn](https://www.linkedin.com/)
-* 🐙 GitHub: [Your GitHub](https://github.com/)
+* 💼 LinkedIn: [)
+* 🐙 GitHub: [https://github.com/Savindi2002)
 
----
-
-# ⭐ If you found this project interesting
-
-Give this repository a ⭐ on GitHub!
-
----
-
-## 📜 License
-
-This project is created for **academic and educational purposes**.
-
-```
-
-### ❤️ One thing before you put this on GitHub
-
-For your actual repository, I would **not leave the README exactly like this**. Once you have your final model results, we should add:
-
-- your **actual Accuracy / Precision / Recall / F1**
-- screenshots of your **EDA**
-- confusion matrix
-- model comparison graph
-- an example of **CV → recommended jobs**
-- your actual GitHub/Colab links
-- a small **architecture diagram**
-
-That will make the README look like a **real Data Science portfolio project**, rather than just an assignment.
-```
