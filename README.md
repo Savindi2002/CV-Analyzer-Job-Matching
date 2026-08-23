@@ -205,16 +205,6 @@ The models are evaluated using:
 
 The models are compared based on their performance.
 
-Example:
-
-| Model                             | Accuracy | Precision | Recall | F1 |
-| --------------------------------- | -------: | --------: | -----: | -: |
-| TF-IDF + Logistic Regression      |        — |         — |      — |  — |
-| TF-IDF + SVM                      |        — |         — |      — |  — |
-| Transformer + Logistic Regression |        — |         — |      — |  — |
-
-> 📌 Replace the `—` values with the actual results generated from the notebook.
-
 ---
 
 # 💼 CV–Job Matching
@@ -487,6 +477,5 @@ Savindi Hewage
 
 ### Connect with me
 
-* 💼 LinkedIn: [)
 * 🐙 GitHub: [https://github.com/Savindi2002)
 
