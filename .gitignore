@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# React
+node_modules/
+dist/
+
+# Environment
+.env
+
+# Large ML artifacts
+backend/job_embeddings.npy
+backend/jobs_processed.csv
+
+# Uploaded CV files
+*.pdf
+uploads/
