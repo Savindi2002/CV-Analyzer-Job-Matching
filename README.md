@@ -1,481 +1,186 @@
+# 🚀 AI-Powered CV Analyzer & Job Matching System
 
+An AI-powered web application that analyzes uploaded CVs, extracts relevant skills, and recommends suitable job opportunities using Natural Language Processing (NLP) and semantic similarity.
 
+## 📌 Project Overview
 
-# 🤖 AI-Powered CV Analyzer & Job Matching System
+Finding suitable job opportunities can be challenging when candidates need to compare their qualifications with many job descriptions.
 
-> An NLP-based system that analyzes resumes, understands job descriptions, matches candidates with suitable jobs, and identifies skill gaps using traditional NLP techniques and Transformer-based embeddings.
+This project aims to simplify that process by allowing users to upload their CVs in PDF format and receive relevant job-matching results based on the information extracted from their resumes.
 
----
+## ✨ Key Features
 
-## 🌟 Project Overview
+- 📄 **CV Upload:** Upload CVs in PDF format.
+- 🔍 **Text Extraction:** Extract textual information from uploaded CVs.
+- 🧠 **NLP-Based Processing:** Process CV content and job descriptions.
+- 🎯 **Job Matching:** Identify relevant job opportunities using semantic similarity.
+- 📊 **Similarity Scores:** Display how closely a CV matches available job descriptions.
+- 💡 **Skill Analysis:** Identify relevant skills and potential skill gaps.
 
-Finding the right job for a candidate can be difficult because resumes and job descriptions contain large amounts of unstructured text.
+## 🛠️ Technology Stack
 
-This project uses **Natural Language Processing (NLP)** to transform CVs and job descriptions into machine-readable representations and determine how well they match.
+| Component | Technologies |
+|---|---|
+| Frontend | React.js, Vite |
+| Backend | Python, FastAPI |
+| NLP Model | Sentence Transformers |
+| Embedding Model | all-MiniLM-L6-v2 |
+| Matching Algorithm | Cosine Similarity |
+| PDF Processing | PyPDF |
+| Data Processing | Pandas, NumPy |
 
-### 🔄 Project Pipeline
+## ⚙️ How It Works
 
-```text
-📄 Resume
-    ↓
-🧹 Text Cleaning
-    ↓
-✂️ Tokenization
-    ↓
-📊 Exploratory Data Analysis
-    ↓
-🔢 Text Representation
-    ├── Bag of Words
-    ├── TF-IDF
-    └── Transformer Embeddings
-    ↓
-🤖 Machine Learning
-    ├── Logistic Regression
-    └── SVM
-    ↓
-🧠 Transformer Model
-    ↓
-📈 Model Evaluation
-    ↓
-🏆 Model Comparison
-    ↓
-💼 CV–Job Matching
-    ↓
-🎯 Skill Gap Analysis
-````
+1. User uploads a CV in PDF format.
+2. The backend extracts text from the uploaded document.
+3. The extracted text is processed.
+4. Sentence Transformers generates numerical text embeddings.
+5. Cosine similarity compares the CV embedding with job-description embeddings.
+6. The system ranks relevant job opportunities.
+7. Matching results are displayed through the web interface.
 
----
-
-## 🎯 Objectives
-
-The main objectives of this project are:
-
-* 📄 Analyze and process resume text
-* 💼 Analyze job descriptions
-* 🧹 Apply NLP preprocessing techniques
-* 🔤 Perform tokenization
-* 📊 Explore the datasets using EDA
-* 🔢 Convert text into numerical representations
-* 🤖 Build traditional machine learning models
-* 🧠 Use Transformer-based embeddings
-* 📈 Evaluate and compare NLP models
-* 💼 Match resumes with suitable job opportunities
-* 🎯 Identify candidate skill gaps
-
----
-
-## 📂 Datasets
-
-The project uses two datasets:
-
-### 1. Resume Dataset
-
-Contains resumes with:
-
-* Resume ID
-* Resume text
-* Resume category
-
-### 2. Job Description Dataset
-
-Contains:
-
-* Job title
-* Job description
-
-The datasets are used separately for **resume classification** and **CV–job semantic matching**.
-
----
-
-# 🧠 NLP Techniques
-
-## 1. Text Preprocessing
-
-Raw resume and job-description text is cleaned before applying NLP techniques.
-
-Steps include:
-
-* Lowercasing
-* Removing HTML
-* Removing URLs
-* Removing special characters
-* Removing unnecessary spaces
-* Stopword handling
-
----
-
-## 2. Tokenization
-
-Text is divided into smaller units called **tokens**.
-
-Example:
+## 📂 Project Structure
 
 ```text
-"Python developer with SQL skills"
-```
-
-becomes:
-
-```text
-["Python", "developer", "with", "SQL", "skills"]
-```
-
----
-
-## 3. Exploratory Data Analysis
-
-EDA is performed to understand the text datasets.
-
-### 📊 Analysis includes:
-
-* Resume category distribution
-* Class imbalance
-* Most common words
-* Resume length distribution
-* Job description length distribution
-* Word clouds
-
----
-
-# 🔢 Text Representation
-
-Different techniques are used to convert text into numerical representations.
-
-### 📦 Bag of Words
-
-Represents documents using word frequencies.
-
-### 📊 TF-IDF
-
-Assigns importance to words based on their frequency within a document and across the collection.
-
-### 🧠 Transformer Embeddings
-
-Pre-trained Transformer-based sentence embeddings are used to capture semantic meaning and contextual relationships in the text.
-
----
-
-# 🤖 Machine Learning Models
-
-The project compares traditional NLP-based machine learning models.
-
-### 1. Logistic Regression
-
-```text
-TF-IDF → Logistic Regression → Resume Category
-```
-
-### 2. Support Vector Machine
-
-```text
-TF-IDF → SVM → Resume Category
-```
-
-### 3. Transformer + Logistic Regression
-
-```text
-Resume
-   ↓
-Transformer
-   ↓
-Embedding
-   ↓
-Logistic Regression
-   ↓
-Resume Category
-```
-
----
-
-# 📈 Model Evaluation
-
-The models are evaluated using:
-
-| Metric           | Purpose                              |
-| ---------------- | ------------------------------------ |
-| Accuracy         | Overall correct predictions          |
-| Precision        | Correctness of positive predictions  |
-| Recall           | Ability to identify relevant cases   |
-| F1-score         | Balance between precision and recall |
-| Confusion Matrix | Detailed prediction analysis         |
-
----
-
-# 🏆 Model Comparison
-
-The models are compared based on their performance.
-
----
-
-# 💼 CV–Job Matching
-
-The Transformer embeddings are also used for semantic CV–job matching.
-
-### Process
-
-```text
-Candidate CV
-     ↓
-Transformer Embedding
-     ↓
-Compare with Job Embeddings
-     ↓
-Cosine Similarity
-     ↓
-Match Scores
-     ↓
-Top 5 Recommended Jobs
-```
-
-For example:
-
-```text
-🥇 Data Analyst       → 89.4%
-🥈 Business Analyst   → 84.7%
-🥉 Data Scientist     → 79.2%
-```
-
-> The scores above are examples only. Actual scores are generated by the model.
-
----
-
-# 🎯 Skill Gap Analysis
-
-The system extracts relevant skills from both the CV and job description.
-
-### Example
-
-```text
-Candidate Skills:
-✓ Python
-✓ SQL
-✓ Pandas
-✓ Power BI
-
-Job Requirements:
-✓ Python
-✓ SQL
-✓ Power BI
-✓ Tableau
-✓ AWS
-```
-
-### Result
-
-```text
-✅ Matched Skills
-   Python
-   SQL
-   Power BI
-
-❌ Missing Skills
-   Tableau
-   AWS
-```
-
-This helps candidates understand which skills they may need to develop for a particular job.
-
----
-
-# 🛠️ Technologies Used
-
-| Technology               | Purpose                 |
-| ------------------------ | ----------------------- |
-| 🐍 Python                | Programming             |
-| 🐼 Pandas                | Data processing         |
-| 🔢 NumPy                 | Numerical operations    |
-| 📊 Matplotlib            | Visualization           |
-| 📈 Seaborn               | Visualization           |
-| 🧹 NLTK                  | NLP preprocessing       |
-| 🔤 Scikit-learn          | ML + TF-IDF             |
-| 🧠 Sentence Transformers | Transformer embeddings  |
-| ☁️ Google Colab          | Development environment |
-| 💾 Google Drive          | Dataset storage         |
-| 🐙 GitHub                | Version control         |
-
----
-
-# 📁 Project Structure
-
-```text
-CV-Job-Matching-NLP/
+CV-Analyzer-Job-Matching/
 │
-├── 📓 NLP_CV_Job_Matching.ipynb
+├── backend/
+│   ├── main.py
+│   ├── requirements.txt
+│   ├── jobs_processed.csv
+│   └── job_embeddings.npy
 │
-├── 📂 data/
-│   ├── Resume.csv
-│   └── job_descriptions.csv
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.js
 │
-├── 📂 results/
-│   ├── model_results.csv
-│   └── job_matching_results.csv
-│
-├── 📂 images/
-│   ├── category_distribution.png
-│   ├── wordcloud_resume.png
-│   ├── wordcloud_jobs.png
-│   ├── confusion_matrix.png
-│   └── model_comparison.png
-│
-└── 📄 README.md
+├── .gitignore
+└── README.md
 ```
 
----
+## 💻 Installation and Setup
 
-# 🚀 How to Run the Project
-
-## 1️⃣ Clone the repository
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/CV-Job-Matching-NLP.git
+git clone https://github.com/Savindi2002/CV-Analyzer-Job-Matching.git
 ```
 
-## 2️⃣ Open Google Colab
+```bash
+cd CV-Analyzer-Job-Matching
+```
 
-Upload/open:
+### 2. Set Up the Backend
+
+```bash
+cd backend
+```
+
+Create a virtual environment:
+
+```bash
+py -m venv .venv
+```
+
+Activate it on Windows:
+
+```bash
+.\.venv\Scripts\Activate.ps1
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Start the FastAPI server:
+
+```bash
+uvicorn main:app --reload
+```
+
+Backend URL:
 
 ```text
-NLP_CV_Job_Matching.ipynb
+http://127.0.0.1:8000
 ```
 
-## 3️⃣ Install required libraries
-
-```python
-!pip install -q pandas numpy scikit-learn nltk seaborn matplotlib wordcloud sentence-transformers
-```
-
-## 4️⃣ Connect Google Drive
-
-```python
-from google.colab import drive
-
-drive.mount('/content/drive')
-```
-
-## 5️⃣ Add the datasets
-
-Place the datasets in your Google Drive and update the file paths in the notebook.
-
-## 6️⃣ Run the notebook
-
-Run the cells in order:
+API documentation:
 
 ```text
-Data Loading
-      ↓
-Preprocessing
-      ↓
-Tokenization
-      ↓
-EDA
-      ↓
-TF-IDF
-      ↓
-Machine Learning
-      ↓
-Transformer
-      ↓
-Evaluation
-      ↓
-CV–Job Matching
+http://127.0.0.1:8000/docs
 ```
 
----
+### 3. Set Up the Frontend
 
-# 📊 Key Results
+Open a second terminal:
 
-The project compares traditional NLP techniques with Transformer-based representations.
+```bash
+cd frontend
+```
 
-### Main research question:
+Install dependencies:
 
-> **Can Transformer-based semantic representations improve CV–job matching and resume analysis compared with traditional TF-IDF-based approaches?**
+```bash
+npm install
+```
 
-The final results will be determined experimentally from the models.
+Start the development server:
 
----
+```bash
+npm run dev
+```
 
-# 🔍 Error Analysis
-
-Some possible sources of errors include:
-
-* Similar words with different meanings
-* Missing skills in resumes
-* Different ways of describing the same skill
-* Very long resumes
-* Generic words appearing in many documents
-* Similar job descriptions belonging to different roles
-
-Example:
+Frontend URL:
 
 ```text
-Resume:
-"Java developer"
-
-Job:
-"JavaScript developer"
+http://localhost:5173
 ```
 
-A traditional word-based approach may identify the shared word `"Java"` and produce misleading similarity.
+Keep both servers running while using the application.
+
+## 📊 Matching Methodology
+
+The application uses the Sentence Transformer model `all-MiniLM-L6-v2` to convert text into numerical embeddings.
+
+Cosine similarity is then used to measure the similarity between the CV and job descriptions.
+
+A higher similarity score indicates greater textual relevance.
+
+**Note:** Similarity scores are not hiring probabilities or guarantees of employment.
+
+## ⚠️ Limitations
+
+- The system currently supports PDF CV uploads.
+- Skill extraction depends on the available skill vocabulary and extraction logic.
+- Scanned PDFs may require OCR support.
+- Matching results depend on the quality of the CV and job descriptions.
+- The system is intended as a decision-support tool, not a replacement for human recruitment decisions.
+
+## 🚀 Future Improvements
+
+- Support additional document formats.
+- Improve skill extraction using advanced NLP techniques.
+- Expand the job dataset.
+- Add personalized career recommendations.
+- Improve skill-gap analysis.
+- Deploy the application for public access.
+
+## 👩‍💻 Author
+
+**Savindi Hewage**
+
+Data Science Undergraduate  
+Sabaragamuwa University of Sri Lanka
+
+- GitHub: [Savindi2002](https://github.com/Savindi2002)
+- LinkedIn: [Savindi Hewage](https://www.linkedin.com/in/savindi-hewage-506790326/)
 
 ---
 
-# ⚠️ Limitations
+⭐ If you find this project interesting, feel free to explore the repository and share your feedback!
 
-Current limitations include:
-
-* The datasets do not contain manually verified CV–job match labels.
-* Skill extraction currently uses a predefined skill dictionary.
-* The Transformer model uses pre-trained embeddings rather than being fine-tuned specifically on recruitment data.
-* Matching scores represent semantic similarity and should not be interpreted as guaranteed hiring decisions.
-
----
-
-# 🚀 Future Improvements
-
-Possible future improvements:
-
-* 🔹 Fine-tune BERT on recruitment-specific data
-* 🔹 Use multilingual models for Sinhala-English CVs
-* 🔹 Improve skill extraction using Named Entity Recognition
-* 🔹 Add experience-level matching
-* 🔹 Add education matching
-* 🔹 Add salary/location preferences
-* 🔹 Build a Streamlit web application
-* 🔹 Add a larger manually labeled CV–job matching dataset
-* 🔹 Use a domain-specific skill ontology
-
----
-
-# 🌐 Future Application
-
-The final system could be developed into a web application:
-
-```text
-             👤 Candidate
-                  ↓
-           Upload CV (PDF)
-                  ↓
-          📄 CV Analyzer
-                  ↓
-        🧠 NLP Processing
-                  ↓
-       💼 Recommended Jobs
-                  ↓
-          🎯 Skill Gap
-                  ↓
-       📚 Skill Recommendations
-```
-
----
-
-# 👨‍💻 Author
-
-Savindi Hewage
-
-🎓 Data Science Undergraduate
-📍 Sri Lanka
-
-### Connect with me
-
-* 🐙 GitHub: [https://github.com/Savindi2002)
-
+**Building with AI. Learning through projects. Creating meaningful solutions.**
